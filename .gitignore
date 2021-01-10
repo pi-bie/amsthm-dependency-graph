@@ -1,0 +1,13 @@
+# ignore everything
+*
+
+# do not ignore .gitignore
+!.gitignore
+
+# do not ignore readme.md
+!readme.md
+
+# do not ignore shell, tex find markup files
+!*.sh
+!*.tex
+

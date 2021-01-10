@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+\theoremstyle{plain}
+\newtheorem{theorem}[defn]{Theorem}
+\newtheorem{proposition}[defn]{Proposition}
+\newtheorem{lemma}[defn]{Lemma}
+\newtheorem{corollary}[defn]{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{example}[defn]{Example}
+\newtheorem*{remark}{Remark}
+
+\begin{document}
+\begin{lemma} \label{lemma:zero}
+This one doesn't even need a proof.
+\end{lemma}
+
+\begin{lemma} \label{lemma:first}
+Some nonsense
+\[a^2 = b^2+c^2\]
+\begin{proof}
+This is self-contained
+\end{proof}
+\end{lemma}
+
+\begin{proposition} \label{prop:second}
+Some result.
+\begin{proof}
+We invoke Lemma~\ref{lemma:zero}.
+\end{proof}
+\end{proposition}
+
+\begin{theorem} \label{thm:main}
+We do know something.
+\begin{proof}
+We want to prove stuff. We rely on Lemma~\ref{lemma:first} and also on Proposition~\ref{prop:second} % but not on \ref{lemma:zero}
+%Do we really need \ref{lemma:zero}?
+We are not sure if we should use Proposition~\ref{prop:nowhere}.
+But certainly, we do need Lemma~\ref{lemma:first}.
+\end{proof}
+\end{theorem}
+\end{document}
